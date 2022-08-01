@@ -26,8 +26,8 @@ test(`Draw button displays choices section`, async () => {
     expect(displayed).toBe(true)
 })
 
-test('characters appear when draw is clicked', async () => {
-    await driver.findElement(By.id('draw')).click()
-    const displayCharacters= await driver.findElement(By.id('choices')).getText()
+test(`characters appear when draw is clicked`, async () => {
+    await driver.findElement(By.id(`draw`)).click()
+    const displayCharacters= await driver.findElement(By.id(`choices`)).getText()
     expect(displayCharacters.length).toBeGreaterThan(0)
 })
